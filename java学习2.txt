@@ -1,0 +1,24 @@
+判断字符串的开始和结尾；
+startsWith(“22”) ?————判断字符是否从22开头；
+endsWhith（”66”）——————判断字符结尾；
+判断字符是否相等；
+{Boolean b = (String1 == String2);}这种比较方法是错误的，字符串的比较不能用==；
+对于字符串的比较，需要用equals()方法或者equalsIgnoreCase()方法；
+string1.equals(String string2);
+string1.equalsIgnoreCase(String string2);
+拓展 ：boolean只能取两个值：true和false
+java语言判断条件的结果必须为boolean类型，比如
+if(true)
+而不能像C一样
+if(1)
+所以判断表达式的结果也为boolean类型，比如：
+1==1---true
+1>2--false
+总的来说是这样使用：
+boolean b = true;
+b = 2>3;//b = false
+if(b) {
+b = true;
+}else {
+//...
+}
