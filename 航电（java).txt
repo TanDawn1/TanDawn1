@@ -1,0 +1,25 @@
+//2010£¨Ë®ÏÉ»¨Êý£©
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scann = new Scanner(System.in);
+        while (scann.hasNext()) {
+            int f = 0 ;
+            int a = scann.nextInt();
+            int b = scann.nextInt();
+            for(int i = a ; i <= b ; i++){
+                int g = i % 10;
+                int s = i/10%10;
+                int B = i/100%10;
+                if(i == g*g*g + s*s*s + B*B*B){
+                    if(f >= 1) System.out.print(" ");
+                    System.out.print(i);
+                    f = f+1;
+                }
+            }
+            if(f == 0) System.out.print("no");
+            System.out.println();
+        }
+    }
+}
