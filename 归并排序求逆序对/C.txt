@@ -1,0 +1,32 @@
+#include<stdio.h>
+int a[500005],b[500005];
+long long ans;
+void mergesort(int l,int r)
+{
+	if(l>=r)return ;
+	int mid=(l+r)/2;//划分 
+	mergesort(l,mid);//递归求解 
+	mergesort(mid+1,r);//递归求解 
+	int l1=l,r1=mid,l2=mid+1,r2=r;
+	int tot=0;
+	while(l1<=r1&&l2<=r2)//合并 
+	{
+		if(a[l1]<=a[l2])b[++tot]=a[l1++];
+		else b[++tot]=a[l2++],ans+=r1-l1+1;
+	}
+	while(l1<=r1)b[++tot]=a[l1++];//这二种情况只会 
+	while(l2<=r2)b[++tot]=a[l2++];//出现1种情况，想想为什么 
+	for(int i=tot,j=r2;i>=1;--i,--j)//将辅助空间b数组复制到a数组 
+		a[j]=b[i];
+}
+int main()
+{
+	int n;
+	while(scanf("%d",&n)&&n)
+	{
+		ans=0;//注意更新 
+		for(int i=1;i<=n;++i)scanf("%d",&a[i]);
+		mergesort(1,n);
+		printf("%lld\n",ans);
+	}
+}
