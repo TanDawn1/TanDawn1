@@ -17,6 +17,7 @@
 ### 开源项目
 - ["Simple-RPC" 简易RPC框架](https://github.com/TanDawn1/Simple-RPC)
 - ["Minds" 校园社交分享平台](https://github.com/TanDawn1/HUT_quanquan)
+- [MIT6.828 循序渐进完成微内核操作系统](https://github.com/TanDawn1/MIT6.828)
 
 ### 关于我
 - [学习笔记](https://github.com/TanDawn1/JavaCake/blob/main/Bolg.md)
